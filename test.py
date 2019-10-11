@@ -10,8 +10,8 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-#あいさつ反応「おはよう」
 @client.event
+#あいさつ反応「おはよう」
 async def on_message(message):
     # 「おはよう」で始まるか調べる
     if message.content.startswith("おはよう"):
@@ -22,6 +22,16 @@ async def on_message(message):
             # メッセージが送られてきたチャンネルへメッセージを送ります
             await message.channel.send(ohayou)
 
+    # 「こんにちは」で始まるか調べる
+    if message.content.startswith("おはよう"):
+        # 送り主がBotだった場合反応したくないので
+        if client.user != message.author:
+            # メッセージを書きます
+            ohayou = "おはよう、" + message.author.name + "。"
+            # メッセージが送られてきたチャンネルへメッセージを送ります
+            await message.channel.send(ohayou)
+
+#あいさつ反応「おはよう」
     if message.content.startswith("依頼"):
         #レスポンスされる張り紙のリストを作成
         harigami = ["街中で出来そうなお使い系の依頼はどうだ？", "どこかの街に出かけて見るのはどうだ？", "ゴブリンの洞窟に関係する依頼がオススメだぞ。", "ちょいと難易度の高そうなダンジョンに挑んでみたらどうだ。", "危険な敵に関する仕事の受け手を求めている依頼があるようだぞ。", "店で買物でもして装備を整えるのも悪くはないんじゃないか？"]
@@ -30,4 +40,4 @@ async def on_message(message):
 
 
 # token にDiscordのデベロッパサイトで取得したトークンを入れてください
-client.run("NjMyMjgwNzg1NTY2ODI2NTIx.XaDHrg.QviZAevRxpBOtoSC2NqagCIUON4")
+client.run("NjMyMjgwNzg1NTY2ODI2NTIx.XaD0sQ.RGd9Xh2WwBACgSIzRGsJ4jFQrhQ")
