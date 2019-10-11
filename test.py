@@ -40,4 +40,4 @@ async def on_message(message):
 
 
 # token にDiscordのデベロッパサイトで取得したトークンを入れてください
-client.run("NjMyMjgwNzg1NTY2ODI2NTIx.XaD0sQ.RGd9Xh2WwBACgSIzRGsJ4jFQrhQ")
+client.run("NjMyMjgwNzg1NTY2ODI2NTIx.XaD1rQ.C4oUQ7q2ujNMFa2c3LGVtH2Oxp8")
